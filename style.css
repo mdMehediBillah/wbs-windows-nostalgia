@@ -93,12 +93,13 @@ main {
 #cancel-btn {
   border: 3px outset;
   border-radius: 0.4rem;
-  width: 100px;
+  width: 150px;
   height: 40px;
   color: rgb(36, 36, 36);
   font-size: 1rem;
   font-weight: 600;
-  background-color: var(--bgGradient);
+  background-color: red;
+  color: white;
   cursor: pointer;
 }
 
