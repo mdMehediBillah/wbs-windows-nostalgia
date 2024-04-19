@@ -1,0 +1,107 @@
+:root {
+  --textColor: white;
+  --bgColor: #c0c0c0;
+  --bgGradient: linear-gradient(90deg, #0f276a, #a4c5eb);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url(resources/windows_xp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  width: 50vw;
+  max-width: 500px;
+  min-width: 450px;
+  margin: 30vh auto;
+  box-shadow: 4px 4px 10px rgba(10, 10, 10, 0.2);
+}
+
+#error-container {
+  box-sizing: content-box;
+  background-color: var(--bgColor);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.4rem;
+  border: 3px solid;
+  border-color: white rgb(34, 34, 34) rgb(30, 30, 30) white;
+}
+
+.error-head {
+  background-image: var(--bgGradient);
+  color: var(--textColor);
+  /* box-shadow: 0px 1px 3px rgb(2, 64, 130); */
+  border-radius: 0.2rem 0.2rem 0px 0px;
+  position: relative;
+}
+
+.error-head::before {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-image: linear-gradient(90deg, #0c2362, #8db1db);
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+}
+
+.error-head h1 {
+  font-size: 1.3rem;
+  padding: 0.4rem 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1.4rem;
+  padding: 1.4rem 1.4rem;
+}
+
+.error-msg {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.error-icon img {
+  filter: drop-shadow(2px 2px 2px rgb(41, 41, 41));
+}
+
+.error-msg p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 0.4rem;
+}
+
+#cancel-btn {
+  border: 3px outset;
+  border-radius: 0.4rem;
+  width: 100px;
+  height: 40px;
+  color: rgb(36, 36, 36);
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--bgGradient);
+  cursor: pointer;
+}
+
+#cancel-btn:active {
+  border: 3px inset;
+}
